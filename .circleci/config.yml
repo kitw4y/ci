@@ -8,10 +8,10 @@ jobs:
         curl -L -o cirrus https://github.com/cirruslabs/cirrus-cli/releases/latest/download/cirrus-linux-amd64
         sudo mv cirrus /usr/local/bin/cirrus
         sudo chmod +x /usr/local/bin/cirrus
+        PATH=~/bin:$PATH && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && chmod a+x ~/bin/repo
         git clone https://github.com/galang8664/local_manifest.git --depth 1 -b evox .repo/local_manifests
         repo sync
         source build/envsetup.sh
         lunch evolution_lava-userdebug
         mka evolution
-        
      - run: cirrus run
