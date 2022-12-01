@@ -19,4 +19,5 @@ jobs:
         lunch evolution_lava-userdebug
         mka evolution
         
+        
      - run: cirrus run
