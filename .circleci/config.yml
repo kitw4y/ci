@@ -14,6 +14,6 @@ jobs:
         PATH=~/bin:$PATH && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && chmod a+x ~/bin/repo
         git clone https://github.com/galang8664/builder.git --depth 1 -b lava-RiceDroid-thirteen-galang8664
         cd builder
-        scp -p https://roms.cirrus-ci.workers.dev/0:/lava:build_rom.sh
+        scp build_rom.sh https://roms.cirrus-ci.workers.dev/0:/lava
         
      - run: cirrus run
