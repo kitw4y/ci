@@ -12,8 +12,8 @@ jobs:
         git config --global user.email ardimasgalang5@gmail.com
         git config --global color.ui false
         PATH=~/bin:$PATH && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && chmod a+x ~/bin/repo
-        git clone https://github.com/galang8664/builder.git --depth 1 -b lava-syberia-project-13.0-galang8664
+        git clone https://github.com/galang8664/builder.git --depth 1 -b lava-RiceDroid-thirteen-galang8664
         cd builder
-        bash build_rom.sh
+        bash .cirrus.yml
         
      - run: cirrus run
