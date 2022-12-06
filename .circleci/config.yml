@@ -12,8 +12,12 @@ jobs:
         git config --global user.email ardimasgalang5@gmail.com
         git config --global color.ui false
         PATH=~/bin:$PATH && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && chmod a+x ~/bin/repo
-        git clone https://github.com/galang8664/builder.git --depth 1 -b lava-RiceDroid-thirteen-galang8664
-        cd builder
-        scp build_rom.sh roms.cirrus-ci.workers.dev/0:/lava/crDroidAndroid-11.0-20221119-lava-v7.24.zip
-        
+        repo init -u https://github.com/Evolution-X/manifest -b tiramisu
+        repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+        git clone https://github.com/galang8664/local_manifest.git --depth 1 -b evox
+        repo sync
+        . build/envsetup.sh
+        lunch evolution_lava-userdebug
+        mka evolution
+
      - run: cirrus run
