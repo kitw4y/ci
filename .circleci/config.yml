@@ -8,16 +8,6 @@ jobs:
         curl -L -o cirrus https://github.com/cirruslabs/cirrus-cli/releases/latest/download/cirrus-linux-amd64
         sudo mv cirrus /usr/local/bin/cirrus
         sudo chmod +x /usr/local/bin/cirrus
-        git config --global user.name galang8664
-        git config --global user.email ardimasgalang5@gmail.com
-        git config --global color.ui false
-        PATH=~/bin:$PATH && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && chmod a+x ~/bin/repo
-        repo init -u https://github.com/Evolution-X/manifest -b tiramisu
-        repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
-        git clone https://github.com/galang8664/local_manifest.git --depth 1 -b evox
-        repo sync
-        . build/envsetup.sh
-        lunch evolution_lava-userdebug
-        mka evolution
+        df -h 
 
      - run: cirrus run
