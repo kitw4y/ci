@@ -10,8 +10,8 @@ jobs:
         sudo chmod +x /usr/local/bin/cirrus
         cd 
         git clone https://github.com/AndroidDumps/dumpyara
-        wget https://bigota.d.miui.com/V13.0.2.0.SJCMIXM/miui_LANCELOTGlobal_V13.0.2.0.SJCMIXM_dd107c921b_12.0.zip
         cd dumpyara
+        wget https://bigota.d.miui.com/V13.0.2.0.SJCMIXM/miui_LANCELOTGlobal_V13.0.2.0.SJCMIXM_dd107c921b_12.0.zip
         bash setup.sh
         bash dumpyara.sh /dumpyara/miui_LANCELOTGlobal_V13.0.2.0.SJCMIXM_dd107c921b_12.0.zip
         
