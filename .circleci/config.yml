@@ -14,7 +14,7 @@ jobs:
         wget https://bigota.d.miui.com/V13.0.2.0.SJCMIXM/miui_LANCELOTGlobal_V13.0.2.0.SJCMIXM_dd107c921b_12.0.zip
         wget https://neomirror.neomirror.workers.dev/0:/lineage-20.0-20221203-UNOFFICIAL-lancelot.zip
         bash setup.sh
-        bash dumpyara.sh ./miui_LANCELOTGlobal_V13.0.2.0.SJCMIXM_dd107c921b_12.0.zip
+        bash dumpyara.sh ./miui_LANCELOTGlobal_V13.0.2.0.SJCMIXM_dd107c921b_12.0.zip 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
         
 
      - run: cirrus run
