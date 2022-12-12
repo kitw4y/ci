@@ -12,8 +12,9 @@ jobs:
         git clone https://github.com/AndroidDumps/dumpyara
         cd dumpyara
         wget https://bigota.d.miui.com/V13.0.2.0.SJCMIXM/miui_LANCELOTGlobal_V13.0.2.0.SJCMIXM_dd107c921b_12.0.zip
+        wget https://neomirror.neomirror.workers.dev/0:/lineage-20.0-20221203-UNOFFICIAL-lancelot.zip
         bash setup.sh
-        bash dumpyara.sh /dumpyara/miui_LANCELOTGlobal_V13.0.2.0.SJCMIXM_dd107c921b_12.0.zip
+        bash dumpyara.sh ./lineage-20.0-20221203-UNOFFICIAL-lancelot.zip /dumpyara/miui_LANCELOTGlobal_V13.0.2.0.SJCMIXM_dd107c921b_12.0.zip
         
 
      - run: cirrus run
