@@ -9,7 +9,6 @@ jobs:
         sudo mv cirrus /usr/local/bin/cirrus
         sudo chmod +x /usr/local/bin/cirrus
         cd 
-        sudo su
         PATH=~/bin:$PATH && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo 
         chmod a+x ~/bin/repo
         mkdir los
