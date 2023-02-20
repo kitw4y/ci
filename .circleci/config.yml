@@ -12,9 +12,9 @@ jobs:
         git config --global user.name galang8664
         git config --global user.email ardimasgalang5@gmail.com
         git config --global color.ui false
-        repo init --depth=1 --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-20.0 -g default,-mips,-darwin,-notdefault
+        repo init -u https://github.com/CipherOS/android_manifest.git -b thirteen
         git clone https://github.com/kitw4y/local_manifest.git --depth 1 -b lineage-20 .repo/local_manifests
-        repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+        repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
         source build/envsetup.sh
         lunch lineage_lancelot-userdebug
         export TZ=Asia/Jakarta #put before last build command
