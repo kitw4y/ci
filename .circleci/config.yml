@@ -13,7 +13,6 @@ jobs:
         git config --global user.email ardimasgalang5@gmail.com
         git config --global color.ui false
         repo init -u https://github.com/CipherOS/android_manifest.git -b thirteen
-        git clone https://github.com/kitw4y/local_manifest.git --depth 1 -b lineage-20 .repo/local_manifests
         repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
         source build/envsetup.sh
         lunch lineage_lancelot-userdebug
