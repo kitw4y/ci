@@ -21,4 +21,4 @@ jobs:
         make bacon 
         rsync -vhcP $file -e "ssh -o Compression=no" galang8664@frs.sourceforge.net:/home/frs/project/rom-buildbot/
         ardimas12345
-     - run: cirrus run
+     - run: cirrus run 
