@@ -7,7 +7,7 @@ jobs:
      - run: |
         PATH=~/bin:$PATH && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo 
         chmod a+x ~/bin/repo
-        mkdir los
+        mkdir los 
         cd los
         git config --global user.name galang8664
         git config --global user.email ardimasgalang5@gmail.com
